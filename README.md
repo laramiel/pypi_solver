@@ -4,7 +4,7 @@ PyPi Solver script
 This script resolves pypi package dependencies specified by one or more
 `*_requirements.txt` files.  These are the *source* files.
 
-The `tools/pypi_solver/main.py` script queries the PyPI server to resolve these
+The `main.py` script queries the PyPI server to resolve these
 requirements to precise package versions. These versions are persisted across
 runs (`--load-metadata`, and `--save-metadata`).
 
@@ -28,7 +28,7 @@ python3 -m venv ~/venv
 
 gcloud auth application-default login
 
-~/venv/bin/python3 tools/pypi_solver/main.py \
+~/venv/bin/python3 main.py \
   --workspace=third_party/pypa/workspace.bzl \
   third_party/pypa/*_requirements.txt
 ```
